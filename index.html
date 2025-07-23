@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Dice Roller</title>
   <style>
-    body {
+    html, body {
+      height: 100%;
+      margin: 0;
       font-family: sans-serif;
-      text-align: center;
-      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  /* vertical center */
+      align-items: center;      /* horizontal center */
     }
     #dice {
-      font-size: 100px;
+      font-size: 200px;  /* bigger dice */
+      margin-bottom: 40px; /* space between dice and button */
     }
     button {
       padding: 10px 20px;
       font-size: 18px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -23,11 +29,5 @@
   <button onclick="rollDice()">Roll</button>
 
   <script>
-    function rollDice() {
-      const diceFaces = ['⚀','⚁','⚂','⚃','⚄','⚅'];
-      const randomIndex = Math.floor(Math.random() * 6);
-      document.getElementById('dice').textContent = diceFaces[randomIndex];
-    }
-  </script>
-</body>
-</html>
+    function
+

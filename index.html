@@ -10,12 +10,13 @@
       font-family: sans-serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;  /* vertical center */
-      align-items: center;      /* horizontal center */
+      justify-content: center;
+      align-items: center;
     }
     #dice {
-      font-size: 200px;  /* bigger dice */
-      margin-bottom: 40px; /* space between dice and button */
+      font-size: 200px;
+      margin-bottom: 40px;
+      user-select: none; /* prevents accidental text selection */
     }
     button {
       padding: 10px 20px;
@@ -29,5 +30,8 @@
   <button onclick="rollDice()">Roll</button>
 
   <script>
-    function
+    function rollDice() {
+      const diceFaces = ['⚀','⚁','⚂','⚃','⚄','⚅'];
+      const randomIndex = Math.floor(Math.random() * 6);
+      console.log("Rolling dic
 

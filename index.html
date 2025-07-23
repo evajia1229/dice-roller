@@ -16,7 +16,7 @@
     #dice {
       font-size: 200px;
       margin-bottom: 40px;
-      user-select: none; /* prevents accidental text selection */
+      user-select: none;
     }
     button {
       padding: 10px 20px;
@@ -27,11 +27,17 @@
 </head>
 <body>
   <div id="dice">🎲</div>
-  <button onclick="rollDice()">Roll</button>
+  <button id="rollBtn">Roll</button>
 
   <script>
-    function rollDice() {
-      const diceFaces = ['⚀','⚁','⚂','⚃','⚄','⚅'];
-      const randomIndex = Math.floor(Math.random() * 6);
-      console.log("Rolling dic
+    const diceFaces = ['⚀','⚁','⚂','⚃','⚄','⚅'];
+    const diceEl = document.getElementById('dice');
+    const rollBtn = document.getElementById('rollBtn');
 
+    rollBtn.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * diceFaces.length);
+      diceEl.textContent = diceFaces[randomIndex];
+    });
+  </script>
+</body>
+</html>
